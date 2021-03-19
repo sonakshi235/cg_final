@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>CourseDeveloper</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link type="text/css" rel="stylesheet" th:href="@{../css/bootstrap.min.css}" />
+</head>
+<body>
+<div class="container">
+	<h1>Add video</h1>
+	<form th:action="@{/student/{id}/courses(id=${student.id})/{courseid}/videos(id=${course.courseid})" method="get" enctype="multipart/form-data" >
+	<div class="col-md-4">
+		<div class="panel panel-default">
+		 <div class="panel-heading">Student info</div>
+		 
+		</div>	
+			<div class="col-md-6">
+			<select class="form-control" name="courseId">
+				<option th:each="course : ${courses}" 
+					th:value="${course.courseid}" 
+					th:text="${course.name}">Course</option>
+			</select>
+			</div>
+			<hr>
+			<input type="submit" name="action" class="btn btn-primary" value="Save"></input>
+			<input type="submit" name="action" class="btn btn-secondary" value="Cancel"></input>
+	</div>
+	</form>
+</div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" 
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+    <title>Course list</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link type="text/css" rel="stylesheet" th:href="@{css/bootstrap.min.css}" />
+</head>
+<body>
+<div class="container">
+	<div class="col-md-4">
+		<h1>Courses</h1>
+	</div>
+    
+    <div style="padding:0 20px">
+    <table class="table table-striped">
+		<tr>
+		    <th>id</th>
+		    <th>Name</th>
+		    <th>Actions</th>
+		</tr>  
+    	<tr th:each = "course : ${courses}">
+    		
+    		<td th:text="${course.courseid}"></td>
+    		<td th:text="${course.name}"></td>
+    		
+    		<td>
+    			<a th:href="@{/addCourseVideo/{courseid}(id=${course.courseid})}" class="btn btn-primary btn-sm">Add Video</a>
+    			<!-- <a sec:authorize="hasAuthority('USER')" th:href="@{/delete/{id}(id=${student.id})/{courseid}(courseid=${course.course.id})" class="btn btn-danger btn-sm">Delete</a> -->
+    		</td>
+    	</tr>
+    </table>
+    <a href="/add" class="btn btn-primary">Add Course</a>
+    
+	</div>    
+</div>
+</body>
+</html>
