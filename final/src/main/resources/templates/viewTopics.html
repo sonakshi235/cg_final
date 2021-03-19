@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<title>Hello</title>
+</head>
+<body>
+<div class="container">
+	
+	<div class="col-md-4" style="padding:20px 0">
+		<form th:action="@{/logout}" method="post">
+			<input type="submit" value="Sign Out" class="btn btn-danger"/>
+		</form>
+	</div>
+	</div>
+              <h1>Course Catalog</h1>
+              <table>
+    <tr>
+        <th>Course Name</th>
+        <th>ID</th>
+    </tr>
+    <tr th:each="topic:${TopicList}">
+        <td th:text="${topic.id}"></td>
+        <td th:text="${topic.name}"></td>
+        <td> <a th:href="${topic.description}">click here </a></td>
+    </tr>
+</table>
+</body>
+</html>

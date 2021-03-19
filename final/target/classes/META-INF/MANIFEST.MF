@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Built-By: Sonakshi
+Build-Jdk: 15.0.1
+Implementation-Title: course-api-data
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: io.courseapi
+Implementation-Vendor: Pivotal Software, Inc.
+Implementation-URL: http://projects.spring.io/spring-boot/course-api-dat
+ a/
+Created-By: Maven Integration for Eclipse
+
