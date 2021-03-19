@@ -13,11 +13,4 @@ Usage (with eclipse):
 3.) Run
 4.) Navigate to localhost:8080
 
-Application contains two demo users: 
-user/user (role=USER) and
-admin/admin (role=ADMIN)
-
-## Screenshot
-
-![Screenshot](http://juhahinkula.github.com/img/crudboot.png)
 
